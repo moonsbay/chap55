@@ -16,6 +16,9 @@ build/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+node_modules/
+.tern-project
+
 
 ### IntelliJ IDEA ###
 .idea
