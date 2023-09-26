@@ -32,6 +32,7 @@ li{
 
 li:hover{
   text-shadow:10px 10px 5px;
+  text-decoration: overline;
 }
 
 a{
