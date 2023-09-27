@@ -40,7 +40,7 @@ div:nth-of-type(4) {
 }	
 </style>
 </head>
-<body>
+<body style="position:relative;">
 <h1>Position 이해</h1>
 <hr>
 <div>box1</div>

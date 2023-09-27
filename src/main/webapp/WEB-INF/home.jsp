@@ -6,6 +6,10 @@
 <meta charset="UTF-8">
 <title>flex.jsp</title>
 <style type="text/css">
+body{
+	margin-top:150px;
+}
+
 ul{
   border:1px solid red;
   list-style:none;
@@ -14,6 +18,9 @@ ul{
   height:100px;
   
   display: flex;
+  position:fixed;
+  top:0px;
+  left:0px;
   
 }
 
