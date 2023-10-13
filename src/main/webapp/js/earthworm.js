@@ -124,7 +124,7 @@
 	 conflictCheckMe(){
 		 
 		    
-		 if(this.alpha.line==1 && this.direction == Direction.TOP) {
+		 if(this.alpha.line==1 && this.direction == Direction.TOP && this.alpha.column != 1 && this.alpha.column != 40) {
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
 		    this.step == 0; 
@@ -147,7 +147,7 @@
 		 }while(this.direction == Direction.TOP || this.direction == Direction.RIGHT);
 		 }
 		 
-		 if(this.alpha.line==20 && this.direction == Direction.BOTTOM){
+		 if(this.alpha.line==20 && this.direction == Direction.BOTTOM && this.alpha.column != 1 && this.alpha.column!= 40){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
 		    this.step == 0; 
@@ -162,14 +162,14 @@
 		 }while(this.direction == Direction.BOTTOM || this.direction == Direction.RIGHT);
 		 }
 		 
-		 if(this.alpha.column==1 && this.direction == Direction.LEFT){
+		 if(this.alpha.column==1 && this.direction == Direction.LEFT && this.alpha.line != 1 && this.alpha.line != 20){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
 		    this.step == 0; 
 		 }while(this.direction == Direction.LEFT);
 		 }
 
-		 if(this.alpha.column==40 && this.direction == Direction.RIGHT){
+		 if(this.alpha.column==40 && this.direction == Direction.RIGHT && this.alpha.line != 1 && this.alpha.line != 20){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
 		    this.step == 0; 
@@ -204,8 +204,8 @@
 		 }
 		 
           
-		 this.conflictCheck();
-//		 this.conflictCheckMe();
+//		 this.conflictCheck();
+		 this.conflictCheckMe();
          if(this.step == 5){
 		    this.direction = Direction.values[parseInt(Math.random()*4)];
 		    this.step = 0;
