@@ -4,11 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>home.jsp</title>
-
-<link rel="icon" type="image/png" href="favicon.png"/>
+<title>submenu5.jsp</title>
 <link rel="stylesheet" href="/css/cube.css">
-
 <style type="text/css">
 /*
 nav{
@@ -97,29 +94,17 @@ li>div, li>a{
 	}
 	
 	iframe{
-	   margin-top: 100px;
+	   width:1000px;
+	   height:1000px;
 	}
 </style>
-<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-
-<script type="text/javascript">
-function resize(){
-	let iframe = document.querySelector('iframe');
-	iframe.style.height = getComputedStyle(iframe.contentDocument.documentElement).height;
-  }
-// window.onload = function(){
-// 	setInterval(resize, 100);
-// }
-  $(document).ready(function(){
-	setInterval(resize, 100);
-   });
-</script>
 </head>
 <body>
-
+<h1>Sub Menu 만들기</h1>
+<hr>
 <nav>
   <ul class="menu">
-    <li style="padding:0px 20px;">
+    <li style="padding: 0px 20px;">
     <section class="perspective">
     <article class="cube">
      <div class="base">Base</div>
@@ -148,8 +133,8 @@ function resize(){
         <li class="sub-menu-item"><a target="content" href="/ani/fill">fill</a></li>
         <li class="sub-menu-item"><a target="content" href="/ani/cross">cross</a></li>
         <li class="sub-menu-item"><a target="content" href="/ani/race">race</a></li>
-        <li class="sub-menu-item"><a target="content" href="/cube.jsp">cube</a></li>
-        <li class="sub-menu-item"><a target="content" href="/placeholder.jsp">placeholder</a></li>
+        <li class="sub-menu-item"><a target="content" href="/ani/cube">cube</a></li>
+     
       </ol>
     </li>
     <li class="menu-item">
@@ -184,16 +169,9 @@ function resize(){
     </li>
   </ul>
 </nav>
+<hr>
+<iframe name="content" sendbox="allow-same-origin">
 
-<iframe src="/alpha/fill" 
-        name="content" 
-        width="100%"
-        scrolling="no"
-        frameborder="0"
-        sendbox="allow-same-origin"  
-        onload = "resize()"
-        >
-iframe태그를 지원하지 않는 브라우저는 이 글이 보인다
 </iframe>
 </body>
 </html>

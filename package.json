@@ -1,0 +1,23 @@
+{
+  "name": "chap55",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "watch": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "es7-sleep": "^1.0.0",
+    "jquery": "^3.7.1",
+    "sprintf-js": "^1.1.3"
+  }
+}

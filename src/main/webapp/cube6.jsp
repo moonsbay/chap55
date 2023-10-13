@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cube4.jsp</title>
+<title>cube5.jsp</title>
 <style type="text/css">
 
 .perspective{
@@ -36,9 +36,9 @@
   position: absolute;
   top:0px;
   left:0px;
-  opacity: 1;
+  opacity: 0.3;
   
-  box-shadow: 0px 0px 30px 10px hotpink;
+  box-shadow: 0px 0px 40px 5px hotpink;
 }
 
 .front{
@@ -73,10 +73,14 @@
 
 @keyframes rotate{
   from{
-    transform:rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    transform:rotateX(0deg) rotateY(0deg);
+  }
+  50%{
+  
+    transform:rotateX(0deg) rotateY(360deg); 
   }
   to{
-    transform:rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+    transform:rotateX(360deg) rotateY(0deg); /* rotateZ(360deg) */
   }
 }
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cube4.jsp</title>
+<title>cube5.jsp</title>
 <style type="text/css">
 
 .perspective{
@@ -25,11 +25,11 @@
 }
 .base{
 /*   border:10px solid red; */
-  width:200px;
-  height:200px;
-  font-size:2em;
+  width:50px;
+  height:50px;
+  font-size:1em;
   text-align: center;
-  line-height: 200px;
+  line-height: 50px;
 }  
  
 .front, .back, .left, .right, .top, .bottom{ 
@@ -42,41 +42,45 @@
 }
 
 .front{
-  transform: translateZ(100px);
+  transform: translateZ(25px);
   background:red;
 }
 
 .back{
-  transform: rotateY(180deg) translateZ(100px);
+  transform: rotateY(180deg) translateZ(25px);
   background:blue;
 }
 
 .left{
-  transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(25px);
   background:green;
 }
 
 .right{
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(25px);
   background:purple;
 }
 
 .top{
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(25px);
   background:yellow;
 }
 
 .bottom{
-  transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(25px);
   background:orange;
 }
 
 @keyframes rotate{
   from{
-    transform:rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    transform:rotateX(0deg) rotateY(0deg);
+  }
+  50%{
+  
+    transform:rotateX(0deg) rotateY(360deg); 
   }
   to{
-    transform:rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+    transform:rotateX(360deg) rotateY(0deg); /* rotateZ(360deg) */
   }
 }
 
