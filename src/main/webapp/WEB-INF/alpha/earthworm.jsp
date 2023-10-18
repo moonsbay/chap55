@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1>ZigZag class + fetch + async/await</h1>
-<h2>external javascript로 만들기(zigzag.js)</h2>
+<h2>external javascript로 만들기(earthworm.js)</h2>
 <hr>
 <button id="btnCreate">Create</button>
 <hr>

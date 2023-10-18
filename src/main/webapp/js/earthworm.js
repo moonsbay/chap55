@@ -49,6 +49,12 @@
 //		 this.direction = parseInt(Math.random()*4);
 		 this.direction = Direction.values[parseInt(Math.random()*4)];
 		 this.step = 0;
+		 this.wormslength = 0;
+		 this.tdd = this.alpha;
+//         let td = this.surface.rows[this.alpha.line-1].cells[this.alpha.column-1];
+         this.worms  = [];
+         this.worms[this.wormslength] = this.tdd;
+         
 	 }
 	 
 	 show(){
@@ -56,16 +62,31 @@
 		 td.style.color = this.alpha.fg;
 		 td.style.background = this.alpha.bg;
 		 td.innerText = this.alpha.ch;
+		 return td;
 	 }
 	 
 	 hide(){
+		 
 		 let td = this.surface.rows[this.alpha.line-1].cells[this.alpha.column-1];
 		 td.style.color = 'white';
 		 td.style.background = 'white';
-		
 		 
 	 }
 	 
+	 
+	 
+	
+	 
+//	 hidess(){
+//         let arr = [0,1,2,3];
+//         
+//		 arr[this.hidestep] = this.surface.rows[this.alpha.line-1].cells[this.alpha.column-1];
+//		 arr[this.hidestep].style.color = 'white';
+//		 arr[this.hidestep].style.background = 'white';
+////			 position = hidefunc.td; 
+//         this.hidestep++;
+//		 }
+	     
 	 async blink(){
 		 for(;;){
 		 this.show();
@@ -124,109 +145,148 @@
 	 conflictCheckMe(){
 		 
 		    
-		 if(this.alpha.line==1 && this.direction == Direction.TOP && this.alpha.column != 1 && this.alpha.column != 40) {
+		 if(this.alpha.line==1 && this.direction == Direction.TOP && this.alpha.column != 1 && this.alpha.column !=40) {
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.TOP);
 		 }
 
-		 if((this.alpha.line==1 && this.alpha.column==1) && 
+		 else if((this.alpha.line==1 && this.alpha.column==1) && 
 		    (this.direction == Direction.TOP || this.direction == Direction.LEFT)){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.TOP || this.direction == Direction.LEFT);
 		 }
 
-		 if((this.alpha.line==1 && this.alpha.column==40) && 
+		 else if((this.alpha.line==1 && this.alpha.column==40) && 
 		    (this.direction == Direction.TOP || this.direction == Direction.RIGHT)){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.TOP || this.direction == Direction.RIGHT);
 		 }
 		 
-		 if(this.alpha.line==20 && this.direction == Direction.BOTTOM && this.alpha.column != 1 && this.alpha.column!= 40){
+		 else if(this.alpha.line==20 && this.direction == Direction.BOTTOM && this.alpha.column != 1 && this.alpha.column != 40){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.BOTTOM);
 		 }
 
-		 if((this.alpha.line==20 && this.alpha.column==40) && 
+		 else if((this.alpha.line==20 && this.alpha.column==40) && 
 		    (this.direction == Direction.BOTTOM || this.direction == Direction.RIGHT)){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.BOTTOM || this.direction == Direction.RIGHT);
 		 }
 		 
-		 if(this.alpha.column==1 && this.direction == Direction.LEFT && this.alpha.line != 1 && this.alpha.line != 20){
+		 else if(this.alpha.column==1 && this.direction == Direction.LEFT && this.alpha.line != 1 && this.alpha.line !=20){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.LEFT);
 		 }
 
-		 if(this.alpha.column==40 && this.direction == Direction.RIGHT && this.alpha.line != 1 && this.alpha.line != 20){
+		 else if(this.alpha.column==40 && this.direction == Direction.RIGHT && this.alpha.line != 1 && this.alpha.line !=20){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.RIGHT);
 		 }
 
-		 if((this.alpha.line==20 && this.alpha.column==1) && 
+		 else if((this.alpha.line==20 && this.alpha.column==1) && 
 		    (this.direction == Direction.BOTTOM || this.direction == Direction.LEFT)){
 		 do{
 			this.direction = Direction.values[parseInt(Math.random()*4)];
-		    this.step == 0; 
+//		    this.step == 0; 
 		 }while(this.direction == Direction.BOTTOM || this.direction == Direction.LEFT);
 		 }
 	 }
-	 
-	 move(){
+	
+//	 let tdd = this.alpha;
+//	 let worms  = [3];
+	
+move(){
 //		 var direction = (parseInt)(Math.random()*4); 여기다 변수 선언 이렇게 하고 direction을 케이스로 했더니 바로 바로 방향이 바뀌어 버림
-		 this.hide();
+		
+			 
+//		 arr = td[2];
+		 
+//		 this.hide();
+//         let tdd = this.alpha;
+//         let td = this.surface.rows[this.alpha.line-1].cells[this.alpha.column-1];
+//         let worms  = [];
+//        this.worms[this.wormslength] = this.tdd;
+       
+         console.log(this.wormslength);
+         console.log(this.worms[this.wormslength]);
+//         console.log(this.worms[1]);
+//         console.log(this.worms[2]);
+         if(this.wormslength == 2){
+//			 this.hide();
+             console.log(this.worms[this.wormslength]);
+//            worms[0].fg = 'white';
+//            worms[0].bg = 'white';
+            this.wormslength = 0;
+         }
+         this.wormslength++;
+//         setTimeout(function(){
+//			 this.hide;
+//		 },1000);
+         
+//         var hidefunc = this.hide();
+         var position;
+		 this.conflictCheckMe();
 		 switch(this.direction){
 		   case Direction.TOP:
 	    	   this.alpha.line--;
+//	    	   let toporigin = this.alpha.line++;
 	    	   break;
 	       case Direction.RIGHT:
 	    	   this.alpha.column++;
+//	    	   let rightorigin = this.alpha.column--;
 	    	   break;
 	       case Direction.BOTTOM:
 	    	   this.alpha.line++;
+//	    	   let bottomorigin = this.alpha.line--;
 	    	   break;
 	       case Direction.LEFT:
 	    	   this.alpha.column--;
+//	    	   let leftorigin = this.alpha.column++;
 	    	   break;
 		 }
 		 
           
 //		 this.conflictCheck();
-		 this.conflictCheckMe();
+    
+         
+//         this.hidess();
+         
          if(this.step == 5){
 		    this.direction = Direction.values[parseInt(Math.random()*4)];
 		    this.step = 0;
-		    }
+		 }
 		 
 		 this.step++;
 		 this.show();
+//		 arr[this.wormslength] = this.show();
+//		 this.wormslength++;
 		 
-		 
-		 
-		 
+		
+//		 setTimeout(this.show, 1000);
 	 }
 	  
 	 async run(){
 		 let response = await fetch('/alpha/data');
 		 /**@type {Alpha} */
 		 this.alpha = await response.json();
-		 console.log(this.alpha);
+//		 console.log(this.alpha);
 		 this.show();
 		 for(;;){
-		   await sleep(this.speed);
+		   await sleep(2000);
 		   this.move();
 		  }
 	 }
